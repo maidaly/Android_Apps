@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="the_price"> الثمن </string>
+    <string name="quantity">الكمية</string>
+
+</resources>
