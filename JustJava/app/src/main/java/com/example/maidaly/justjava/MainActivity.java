@@ -14,6 +14,7 @@ package com.example.maidaly.justjava;
         import android.content.Intent;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
+        import android.util.Log;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("i",String.valueOf(R.drawable.latte)+" "+String.valueOf(R.drawable.mocha1 +" "+String.valueOf(R.drawable.espresso+
+        " "+String.valueOf(R.drawable.cappuccio))));
     }
 
     /**
