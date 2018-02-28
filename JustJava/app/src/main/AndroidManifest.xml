@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MakeOrder"></activity>
+        <activity
+            android:name=".MakeOrder"
+            android:label="Coffee Order"></activity>
+        <activity
+            android:name=".OrderDetails"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

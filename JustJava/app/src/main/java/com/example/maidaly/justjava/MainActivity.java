@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("i",String.valueOf(R.drawable.latte)+" "+String.valueOf(R.drawable.mocha1 +" "+String.valueOf(R.drawable.espresso+
-        " "+String.valueOf(R.drawable.cappuccio))));
+
     }
 
     /**

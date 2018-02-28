@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.maidaly.justjava.OrderDetails">
+    <TextView
+        android:id="@+id/coffe_ordered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="coffe ordered"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:id="@+id/quantity_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coffe_ordered"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/text_background">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            android:background="@drawable/text_background"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-"
+            android:background="@drawable/text_background"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quantity_container"
+        android:orientation="horizontal">
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="small"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        />
+
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:checked="true"
+        android:text="medium"
+        android:layout_weight="1"
+        android:layout_margin="5dp"/>
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="large"
+            android:drawableRight="@mipmap/ic_account_circle_white_24dp"/>
+    </RadioGroup>
+</RelativeLayout>
