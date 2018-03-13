@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/havan"/>
+            <size android:height="48dp"
+                android:width="48dp"></size>
+
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@android:drawable/ic_dialog_email"
+            android:gravity="center"></bitmap>
+    </item>
+</layer-list>

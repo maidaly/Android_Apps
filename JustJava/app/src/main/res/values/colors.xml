@@ -3,4 +3,6 @@
     <color name="colorPrimary">#FFA700</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="text_color">#000000</color>
+    <color name="havan">#DB5800</color>
 </resources>

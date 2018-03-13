@@ -1,73 +1,454 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#50E8CA78"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.maidaly.justjava.OrderDetails">
-    <TextView
-        android:id="@+id/coffe_ordered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="coffe ordered"
-        android:textSize="30sp"/>
 
-    <LinearLayout
-        android:id="@+id/quantity_container"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/coffe_ordered"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_background">
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="+"
-            android:background="@drawable/text_background"/>
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--<TextView-->
+        <!--android:id="@+id/coffe_ordered_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Cups"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:layout_gravity="center_vertical|start"-->
+        <!--android:textSize="30sp" />-->
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/app_bar"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/havan" />
+
+        <View
+            android:id="@+id/line1_copy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line1"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/havan" />
+
+        <LinearLayout
+            android:id="@+id/quantity_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_gravity="center_vertical|bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <Button
+                android:id="@+id/decrement_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="-"
+                android:textColor="#424242"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cups_numbers_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#424242"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/increment_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="+"
+                android:textColor="#424242"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/quantity_container1"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/havan" />
+
+        <View
+            android:id="@+id/line2_copy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line2"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/havan" />
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/size_text_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/line2"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:text="Size"-->
+        <!--android:textSize="30sp" />-->
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2_copy"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/small_RadioButton"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:button="@drawable/checkbox_selector_small"
+                android:onClick="onRadioButtonClicked"
+                android:paddingLeft="10dp"
+                android:text="Small"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/medium_RadioButton"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@drawable/checkbox_medium"
+                android:onClick="onRadioButtonClicked"
+                android:paddingLeft="10dp"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/large_RadioButton"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@drawable/checkbox_large"
+                android:onClick="onRadioButtonClicked"
+                android:paddingLeft="10dp"
+                android:text="Large" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/havan" />
+
+        <View
+            android:id="@+id/line3_copy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line3"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/havan" />
+
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:id="@+id/adds_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line3_copy"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Topping : Options"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/Toping_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adds_text_view"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/Chocolate_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/checkbox_medium"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Chocolate"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="$2"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/Caramel_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/checkbox_medium"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Caramel"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="$2"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/vanilla_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/checkbox_medium"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Vanilla"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="$2"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/WipeCream_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/checkbox_medium"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Wipe Cream"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="$2"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/Toping_Container"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/havan" />
+
+        <View
+            android:id="@+id/line4_copy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line4"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/havan" />
+
+        <LinearLayout
+            android:id="@+id/sugar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line4_copy"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Sugar"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/sugar_buttons_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/decrement_sugar_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="-"
+                    android:textColor="#424242"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sugar_spoons_numbers_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#424242"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increment_sugar_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="+"
+                    android:textColor="#424242"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sugar_container"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/havan" />
+
+        <View
+            android:id="@+id/line5_copy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/line5"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/havan" />
+        <!--style="@style/Widget.AppCompat.CompoundButton.CheckBox" -->
+        <!--this  line used to use checkbox style for RadioButton-->
         <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="-"
-            android:background="@drawable/text_background"/>
-
-    </LinearLayout>
-
-    <RadioGroup
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/quantity_container"
-        android:orientation="horizontal">
-    <RadioButton
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="small"
-        android:textSize="20sp"
-        android:layout_margin="5dp"
-        />
-
-    <RadioButton
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:checked="true"
-        android:text="medium"
-        android:layout_weight="1"
-        android:layout_margin="5dp"/>
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="large"
-            android:drawableRight="@mipmap/ic_account_circle_white_24dp"/>
-    </RadioGroup>
-</RelativeLayout>
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@id/sugar_container"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/done_button"
+            android:text="Done"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
