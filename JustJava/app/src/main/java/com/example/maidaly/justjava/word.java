@@ -4,7 +4,6 @@
 package com.example.maidaly.justjava;
 
 public class word {
-    private static final int NO_IMAGE_PROVIDED = -1;
     private int mImageResourceId;
     private String mCoffeType;
     private String mCoffePrice;

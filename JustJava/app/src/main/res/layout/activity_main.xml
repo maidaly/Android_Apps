@@ -7,49 +7,68 @@
     android:background="@drawable/kettle"
     android:orientation="vertical"
     tools:context="com.example.maidaly.justjava.MainActivity">
-
-    <EditText
-        android:id="@+id/edited_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:allowUndo="true"
         android:autoSizeMinTextSize="5sp"
         android:background="@drawable/button_shape"
         android:drawableStart="@mipmap/ic_account_circle_white_24dp"
         android:drawablePadding="10dp"
-        android:hint="user name"
-        android:maxLength="40"
+        android:hint="User name"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textCursorDrawable="@null" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/user_name"
+        android:allowUndo="true"
+        android:autoSizeMinTextSize="5sp"
+        android:background="@drawable/button_shape"
+        android:drawableStart="@drawable/ic_mail_outline_white_24dp"
+        android:drawablePadding="10dp"
+        android:hint="Email : example@gmail.com"
+        android:inputType="textEmailAddress"
         android:maxLines="1"
         android:padding="8dp"
         android:paddingBottom="8dp"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
         android:textCursorDrawable="@null" />
-
-    <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="2px"-->
-        <!--android:layout_below="@id/edited_text"-->
-        <!--android:layout_marginEnd="40dp"-->
-        <!--android:layout_marginStart="40dp"-->
-        <!--android:background="#ffffff" />-->
-
-
+    </LinearLayout>
     <Button
-        android:id="@+id/b2"
+        android:id="@+id/new_order_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="198dp"
         android:background="@drawable/buttonshape"
-        android:onClick="submitOrder"
+        android:onClick="NewOrder"
         android:text="NEW ORDER"
         android:textColor="#ffffff"
         android:textSize="15sp" />
