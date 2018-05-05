@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1b1a1a"
+    tools:context="com.example.android.tensorflow.MainActivity">
+
+    <com.example.android.tensorflow.DrawView
+        android:id="@+id/draw"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+    <Button
+        android:id="@+id/btn_class"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Detect"
+        android:layout_marginRight="16dp"/>
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Clear"/>
+    </LinearLayout>
+    <TextView
+        android:layout_margin="8dp"
+        android:paddingLeft="10dp"
+        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:id="@+id/tfRes"
+        android:background="#ffffff"
+        android:textColor="#000000"/>
+</LinearLayout>

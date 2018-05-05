@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_base_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <!--Costume Image View for square Image Views -->
+    <com.example.maidaly.justjava.SquareImageView
+        android:id="@+id/coffe_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/text_background">
+
+        <TextView
+            android:id="@+id/coffe_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="italic"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/coffe_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
