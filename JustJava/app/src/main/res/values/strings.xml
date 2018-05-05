@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Just Java</string>
-    <string name="the_price">Price</string>
-    <string name="quantity">quantity</string>
-    <string name="title_activity_scrolling">ScrollingActivity</string>
-    <string name="action_settings">Settings</string>
-</resources>
