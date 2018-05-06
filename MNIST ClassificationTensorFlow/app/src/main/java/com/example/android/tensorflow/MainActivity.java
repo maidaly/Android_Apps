@@ -139,7 +139,7 @@ public class MainActivity extends Activity implements View.OnClickListener, View
                     text += classifier.name() + ": ?\n";
                 } else {
                     //else output its name
-                    text += String.format("%s:\n Number: %s,  Probability: %f\n", classifier.name(), res.getLabel(),
+                    text += String.format("%s:\n Number: %s,  Probability: %f\n\n", classifier.name(), res.getLabel(),
                             res.getConf());
                 }
             }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1b1a1a"
+    android:background="#444949"
     tools:context="com.example.android.tensorflow.MainActivity">
 
     <com.example.android.tensorflow.DrawView
@@ -40,6 +40,8 @@
         android:layout_height="150dp"
         android:layout_width="match_parent"
         android:id="@+id/tfRes"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp"
         android:background="#ffffff"
         android:textColor="#000000"/>
 </LinearLayout>
