@@ -1,6 +1,7 @@
 # MNIST Classification TensorFlow
 This folder contains an example application using TensorFlow and Keras for Android devices.This application used to detect handwritten digits
 based on MINST dataset.
+[Here](https://github.com/maidaly/Android_Apps/tree/master/Images/TensorFlow%20App%20Screenshots) are the app screenshots. 
 
 ![Image](https://github.com/maidaly/Android_Apps/blob/master/Images/tensorflow_demo.PNG)
 
